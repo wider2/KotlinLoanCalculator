@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:isScrollContainer="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textViewCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_big_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_medium_margin"
+            android:text="@string/app_name"
+            android:textSize="@dimen/captionText"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewIdCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_average_margin"
+            android:layout_marginTop="@dimen/activity_vertical_medium_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_average_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_medium_margin"
+            android:text="@string/personalCode"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCaption" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutIdCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_average_margin"
+            android:layout_marginTop="@dimen/activity_vertical_medium_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_average_margin"
+            android:hint="@string/inputPersonalCode"
+            app:endIconMode="clear_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewIdCode">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextIdCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone|flagNoExtractUi"
+                android:inputType="phone|textNoSuggestions"
+                android:lines="1"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:tag="tagLoginEditText"
+                android:text=""
+                android:textSize="@dimen/text16" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--android:digits="0123456789 "
+         49002010965
+         49002010976
+        -->
+
+        <Button
+            android:id="@+id/buttonIdCode"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_average_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_medium_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_average_margin"
+            android:backgroundTint="@color/colorAccent"
+            android:tag="tagButtonIdCode"
+            android:text="@string/confirm"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutIdCode" />
+
+
+        <TextView
+            android:id="@+id/textViewWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_average_margin"
+            android:layout_marginTop="@dimen/activity_vertical_medium_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_average_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_medium_margin"
+            android:text="@string/welcome"
+            android:textSize="@dimen/welcomeText"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonIdCode" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutLoan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_average_margin"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewWelcome">
+
+            <TextView
+                android:id="@+id/textViewLoanAmount"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_average_margin"
+                android:text="@string/loanAmount" />
+
+            <EditText
+                android:id="@+id/editTextLoanAmount"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/textViewLoanAmount"
+                android:autofillHints="@string/loanAmount"
+                android:hint="@string/loanAmount"
+                android:imeOptions="actionNext|flagNoExtractUi"
+                android:inputType="number|textNoSuggestions"
+                android:maxLength="7"
+                android:tag="tagEditTextLoanAmount"
+                android:text="@string/hintAmount" />
+
+            <TextView
+                android:id="@+id/textViewCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_average_margin"
+                android:layout_toEndOf="@id/editTextLoanAmount"
+                android:text="@string/currency" />
+
+
+            <TextView
+                android:id="@+id/textViewLoanPeriod"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewLoanAmount"
+                android:layout_margin="@dimen/activity_horizontal_average_margin"
+                android:text="@string/loanPeriod" />
+
+            <EditText
+                android:id="@+id/editTextLoanPeriod"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewLoanAmount"
+                android:layout_toEndOf="@id/textViewLoanPeriod"
+                android:autofillHints="@string/loanPeriod"
+                android:hint="@string/loanPeriod"
+                android:imeOptions="actionDone|flagNoExtractUi"
+                android:inputType="number|textNoSuggestions"
+                android:maxLength="7"
+                android:tag="tagEditTextLoanPeriod"
+                android:text="@string/hintPeriod" />
+
+            <TextView
+                android:id="@+id/textViewMonths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewLoanAmount"
+                android:layout_margin="@dimen/activity_horizontal_average_margin"
+                android:layout_toEndOf="@id/editTextLoanPeriod"
+                android:text="@string/months" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_average_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_medium_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_average_margin"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/submit"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayoutLoan" />
+
+        <TextView
+            android:id="@+id/textViewNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_average_margin"
+            android:layout_marginTop="@dimen/activity_vertical_medium_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_average_margin"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textSize="@dimen/notificationText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSubmit" />
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_average_margin"
+            android:text=""
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/statusText"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNotification" />
+
+
+        <Button
+            android:id="@+id/buttonSignOut"
+            style="?android:textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_average_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_medium_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_average_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_medium_margin"
+            android:backgroundTint="@color/colorGrey"
+            android:text="@string/signOut"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

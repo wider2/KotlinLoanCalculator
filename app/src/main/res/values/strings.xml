@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Loan Calculator</string>
+
+    <string name="errorUnknown">Unknown error</string>
+    <string name="printError" formatted="false">Error code: %s, %s</string>
+    <string name="syncSuccess">Data synchronized successfully</string>
+    <string name="dataSynchronized">Data synchronized: </string>
+
+    <string name="personalCode">Personal code</string>
+    <string name="inputPersonalCode">Please input personal code for identification</string>
+    <string name="loanAmount">Loan amount</string>
+    <string name="loanPeriod">Loan period</string>
+    <string name="decision">Decision</string>
+    <string name="submit">Submit</string>
+    <string name="confirm">Confirm</string>
+    <string name="hintAmount">4000</string>
+    <string name="hintPeriod">12</string>
+    <string name="currency">€</string>
+    <string name="signOut">Sign out</string>
+    <string name="welcome">Welcome, %s</string>
+    <string name="months">months</string>
+
+    <string name="errorPersonalCode">You input wrong personal code.</string>
+    <string name="refusedByDebt">You have debt. Cannot continue to calculate loan.</string>
+    <string name="wrongType">You input is wrong. Please fix it.</string>
+    <string name="errorLoanTooSmall">Your input loan amount too small. Minimum is %s</string>
+    <string name="errorLoanTooBig">Your input loan amount too big. Maximum is %s</string>
+    <string name="errorLoanPeriodTooSmall">Your input loan period too small. Minimum is %s</string>
+    <string name="errorLoanPeriodTooBig">Your input loan period too big. Maximum is %s</string>
+
+    <string name="maxPossibleAmount">Maximum possible amount: %s %s\n</string>
+    <string name="loanApproved">Loan approved</string>
+    <string name="loanDeclined">Loan declined</string>
+    <string name="creditScoreInsufficientMaxAmount">Credit score is insufficient with selected period, using amount %s %s\n</string>
+    <string name="minPossiblePeriod">Minimum possible period: %s %s\n</string>
+    <string name="minPossiblePeriodFailed">Your minimum loan period %s is bigger than period limit %s. Loan conditions failed.</string>
+
+</resources>
